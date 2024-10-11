@@ -1,5 +1,23 @@
-<h4>Cerca!</h4>
+<div class="container">
+  <h4>Cerca una carta:</h4>
 
-<input type="text" #query><button (click)="submit(query)">Invio</button>
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" #query placeholder="Search">
+    <div class="input-group-append">
+      <button class="btn btn-primary" (click)="submit(query)">Invio</button>
+    </div>
+  </div>
 
-<p>{{results | json }}</p>
+  <div class="row">
+    <div *ngFor="let card of results.data" class="col-md-4 col-sm-6 mb-3">
+      <a [routerLink]="['/carta', card.id]" class="text-decoration-none">
+        <div class="card h-100">
+          <img src="{{card.images.small}}" [alt]="card.name" class="card-img-top img-fluid">
+          <div class="card-body">
+            <h5 class="card-title">{{card.name}}</h5>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>

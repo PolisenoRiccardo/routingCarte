@@ -1,16 +1,25 @@
-<h4>{{results.data.name}}</h4>
-<a href="{{results.data.images.large}}"><img src="{{results.data.images.small}}" alt="" class="img-fluid mb-3 ms-3"></a>
-<div class="d-flex">
-    <div class="card">
-      <div class="card-body row">
-            <h5 class="card-title">Characteristics</h5>
-            <div class="list-group list-group-flush">
-                <div class="list-group-item">Type: {{results.data.supertype}}</div>
-                <div class="list-group-item">Rarity: {{results.data.rarity}}</div>
-                <div class="list-group-item">Set Name: {{results.data.set.name}} <img src="{{results.data.set.images.logo}}" alt="" class="img-fluid" style="width: 50px; height: auto;"></div>
-                <div class="list-group-item">Set Number: {{results.data.number}}/{{results.data.set.printedTotal}}</div>
-                <div class="list-group-item">Artist: {{results.data.artist}}</div>
+<div class="container">
+  <h4>{{results.data.name}}</h4>
+  <a href="{{results.data.images.large}}">
+    <img src="{{results.data.images.small}}" alt="" class="img-fluid mb-3 ms-3">
+  </a>
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Characteristics</h5>
+          <div class="list-group list-group-flush">
+            <div class="list-group-item">Type: {{results.data.supertype}}</div>
+            <div class="list-group-item">Rarity: {{results.data.rarity}}</div>
+            <div class="list-group-item">
+              Set Name: {{results.data.set.name}}
+              <img src="{{results.data.set.images.logo}}" alt="" class="img-fluid" style="width: 50px; height: auto;">
             </div>
+            <div class="list-group-item">Set Number: {{results.data.number}}/{{results.data.set.printedTotal}}</div>
+            <div class="list-group-item">Artist: {{results.data.artist}}</div>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </div>
